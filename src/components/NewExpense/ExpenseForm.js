@@ -7,17 +7,17 @@ export default function ExpenseForm(props) {
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
-    console.log(enteredTitle);
+    //console.log(enteredTitle);
   };
 
   const amountChangeHandler = (event) => {
     setEnteredAmount(event.target.value);
-    console.log(enteredAmount);
+    //console.log(enteredAmount);
   };
 
   const dateChangeHandler = (event) => {
     setEnteredDate(event.target.value);
-    console.log(enteredDate);
+    //console.log(enteredDate);
   };
 
   const submitHandler = (event) => {
@@ -68,6 +68,7 @@ export default function ExpenseForm(props) {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancel}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
